@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/pending_app_imageViewID"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pending_app_nameID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:text="Download Apps"
+            app:layout_constraintEnd_toStartOf="@id/pending_app_checkUpdateBtnID"
+            app:layout_constraintStart_toEndOf="@id/pending_app_imageViewID"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pending_app_oldVersionTextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/pending_app_nameID"
+            android:ellipsize="end"
+            android:text="Old Version"
+            app:layout_constraintTop_toBottomOf="@id/pending_app_imageViewID"
+            app:layout_constraintStart_toEndOf="@id/pending_app_imageViewID"
+            />
+
+        <TextView
+            android:id="@+id/pending_app_newVersionTextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="New Version"
+            app:layout_constraintStart_toStartOf="@id/pending_app_oldVersionTextID"
+            app:layout_constraintTop_toBottomOf="@id/pending_app_oldVersionTextID" />
+
+        <TextView
+            android:id="@+id/pending_app_oldVersionID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="1.2.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pending_app_oldVersionTextID"
+            app:layout_constraintTop_toBottomOf="@id/pending_app_imageViewID" />
+
+        <TextView
+            android:id="@+id/pending_app_newVersionID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:text="1.3.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pending_app_newVersionTextID"
+            app:layout_constraintTop_toBottomOf="@id/pending_app_oldVersionTextID" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pending_app_checkUpdateBtnID"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:text="Update"
+            app:cornerRadius="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/purple_200" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
